@@ -1,0 +1,20 @@
+{
+  "version": "urti-kaggle-multimodel-v2",
+  "sample_rate": 16000,
+  "duration_seconds": 8,
+  "max_input_seconds": 60,
+  "n_fft": 512,
+  "hop_length": 256,
+  "n_mels": 64,
+  "fmin": 50,
+  "fmax": 8000,
+  "trim_top_db": 30,
+  "threshold": 0.2829736205336739,
+  "labels": {
+    "0": "non_URTI",
+    "1": "URTI"
+  },
+  "calibrated": true,
+  "calibration": "platt",
+  "selected_model": "small_cnn"
+}

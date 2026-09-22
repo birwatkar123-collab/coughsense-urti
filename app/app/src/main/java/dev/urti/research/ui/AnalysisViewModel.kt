@@ -2,6 +2,7 @@ package dev.urti.research.ui
 
 import android.app.Application
 import android.net.Uri
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import dev.urti.research.UrtiApp
@@ -11,9 +12,8 @@ import dev.urti.research.data.AnalysisOutcome
 import dev.urti.research.data.AnalysisSource
 import dev.urti.research.data.AudioDecoder
 import dev.urti.research.data.AudioRecorder
+import dev.urti.research.data.KaggleCnnClassifier
 import dev.urti.research.data.QualityReport
-import dev.urti.research.data.V4Classifier
-import dev.urti.research.data.YamnetEmbedder
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -36,8 +36,7 @@ sealed interface UiState {
 class AnalysisViewModel(app: Application) : AndroidViewModel(app) {
 
     private val recorder = AudioRecorder()
-    private val embedder: YamnetEmbedder by lazy { UrtiApp.instance.embedder }
-    private val classifier: V4Classifier by lazy { UrtiApp.instance.classifier }
+    private val classifier: KaggleCnnClassifier by lazy { UrtiApp.instance.classifier }
     private val historyDao = UrtiApp.instance.database.historyDao()
 
     private val _uiState = MutableStateFlow<UiState>(UiState.Idle)
@@ -116,9 +115,10 @@ class AnalysisViewModel(app: Application) : AndroidViewModel(app) {
             _uiState.value = UiState.Inferring
             val outcome = try {
                 withContext(Dispatchers.Default) {
-                    AnalysisEngine.run(samples, embedder, classifier)
+                    AnalysisEngine.run(samples, classifier)
                 }
             } catch (t: Throwable) {
+                Log.e(TAG, "Analysis failed", t)
                 _uiState.value = UiState.Failure("Analysis could not be completed (${t.javaClass.simpleName}).")
                 return@launch
             }
@@ -145,5 +145,9 @@ class AnalysisViewModel(app: Application) : AndroidViewModel(app) {
                 }
             }
         }
+    }
+
+    companion object {
+        private const val TAG = "AnalysisViewModel"
     }
 }

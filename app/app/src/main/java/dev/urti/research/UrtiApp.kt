@@ -4,8 +4,7 @@ import android.app.Application
 import android.content.Context
 import androidx.room.Room
 import dev.urti.research.data.AppDatabase
-import dev.urti.research.data.V4Classifier
-import dev.urti.research.data.YamnetEmbedder
+import dev.urti.research.data.KaggleCnnClassifier
 
 class UrtiApp : Application() {
 
@@ -15,8 +14,7 @@ class UrtiApp : Application() {
             .build()
     }
 
-    val embedder: YamnetEmbedder by lazy { YamnetEmbedder.load(this) }
-    val classifier: V4Classifier by lazy { V4Classifier.load(this) }
+    val classifier: KaggleCnnClassifier by lazy { KaggleCnnClassifier.load(this) }
 
     override fun onCreate() {
         super.onCreate()

@@ -96,8 +96,8 @@ fun ScoreCard(result: AnalysisResult, modifier: Modifier = Modifier) {
                 Text(formatSeconds(result.durationMs))
             }
             Text(
-                "Reference decision threshold: 0.5. This is an experimental output of the " +
-                    "research classifier, not a clinical finding.",
+                "Reference decision threshold: ${String.format(Locale.US, "%.3f", result.decisionThreshold)}. " +
+                    "This is an experimental output of the research classifier, not a clinical finding.",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )

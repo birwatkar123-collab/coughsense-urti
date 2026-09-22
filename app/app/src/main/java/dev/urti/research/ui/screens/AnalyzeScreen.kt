@@ -40,7 +40,7 @@ fun AnalyzeScreen(vm: AnalysisViewModel, onHome: () -> Unit, onBack: () -> Unit)
                     LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
                 }
                 is UiState.Preparing -> Phase("Preparing audio", index = 0, totalSteps = 4)
-                is UiState.Extracting -> Phase("Extracting audio features (YAMNet)", index = 2, totalSteps = 4)
+                is UiState.Extracting -> Phase("Extracting mel-spectrogram features", index = 2, totalSteps = 4)
                 is UiState.Inferring -> Phase("Running research classifier", index = 3, totalSteps = 4)
                 is UiState.Success -> {
                     Heading("Analysis complete")

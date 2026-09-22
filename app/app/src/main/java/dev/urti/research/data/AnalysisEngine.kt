@@ -12,6 +12,7 @@ sealed interface AnalysisOutcome {
 data class AnalysisResult(
     val score: Double,
     val positive: Boolean,
+    val decisionThreshold: Double,
     val band: Band,
     val durationMs: Long,
     val processedSamples: Int,
@@ -19,30 +20,24 @@ data class AnalysisResult(
 
 enum class AnalysisSource { RECORDER, IMPORT }
 
-/** Runs the on-device research pipeline exactly as validated in tools/parity_check.py. */
+/** Runs the on-device Kaggle multimodel-v2 spectrogram CNN research pipeline. */
 object AnalysisEngine {
 
     fun run(
         samples: FloatArray,
-        embedder: YamnetEmbedder,
-        classifier: V4Classifier,
+        classifier: KaggleCnnClassifier,
     ): AnalysisOutcome {
         val reason = Preprocessing.rejectReason(samples)
         if (reason != null) return AnalysisOutcome.Rejected(reason, friendly(reason))
 
         val report = QualityAnalyzer.analyze(samples)
-
-        val prepped = Preprocessing.preprocess(samples)
-        if (!prepped.ok) {
-            val r = prepped.reason ?: "preprocess_failed"
-            if (r == "trimmed_too_short") {
-                return AnalysisOutcome.Rejected(r, "Too little audio remains after removing silence. Please try again.")
-            }
-            return AnalysisOutcome.Rejected(r, friendly(r))
-        }
-
-        val embedding = try {
-            embedder.meanEmbedding(prepped.samples)
+        val prediction = try {
+            classifier.predict(samples)
+        } catch (_: IllegalArgumentException) {
+            return AnalysisOutcome.Rejected(
+                "trimmed_too_short",
+                "Too little audio remains after removing silence. Please try again.",
+            )
         } catch (t: Throwable) {
             return AnalysisOutcome.Rejected(
                 "internal_error",
@@ -50,16 +45,15 @@ object AnalysisEngine {
                     "Please try a shorter recording.",
             )
         }
-        val score = classifier.score(embedding)
-        val positive = classifier.isPositive(score)
 
         return AnalysisOutcome.Completed(
             result = AnalysisResult(
-                score = score,
-                positive = positive,
+                score = prediction.score,
+                positive = prediction.positive,
+                decisionThreshold = classifier.metadata.decisionThreshold,
                 band = report.band,
                 durationMs = report.durationMs,
-                processedSamples = prepped.samples.size,
+                processedSamples = prediction.processedSamples,
             ),
             report = report,
         )

@@ -14,11 +14,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import dev.urti.research.data.ModelMetadata
+import dev.urti.research.data.KaggleModelMetadata
 import dev.urti.research.ui.components.ResearchDisclaimer
 
 @Composable
-fun AboutScreen(metadata: ModelMetadata, onBack: () -> Unit) {
+fun AboutScreen(metadata: KaggleModelMetadata, onBack: () -> Unit) {
     Scaffold { inner ->
         Column(
             modifier = Modifier.fillMaxSize().padding(inner).padding(24.dp),
@@ -31,7 +31,7 @@ fun AboutScreen(metadata: ModelMetadata, onBack: () -> Unit) {
                 Text(metadata.modelFamily)
             }
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text("Embedding pooling")
+                Text("Input features")
                 Text(metadata.embeddingPooling)
             }
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
