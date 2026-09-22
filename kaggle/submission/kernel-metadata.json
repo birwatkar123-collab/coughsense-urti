@@ -3,7 +3,7 @@
   "is_private": true,
   "competition_sources": [],
   "title": "URTI Cough Multimodel Calibrated Training",
-  "id": "birwatkar/urti-cough-multimodel-calibrated",
+  "id": "birwatkar/urti-cough-multimodel-calibrated-training",
   "code_file": "URTI_Training.ipynb",
   "kernel_sources": [],
   "enable_gpu": true,

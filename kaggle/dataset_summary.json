@@ -1,9 +1,12 @@
 {
-  "recordings": 2466,
-  "unique_audio_hashes": 2466,
+  "recordings": 2465,
+  "unique_audio_hashes": 2465,
   "seed": 75,
+  "preprocessing_excluded_uuids": [
+    "c9f8ed02-90a1-4a0f-9f2c-d3fd04f3ffbd"
+  ],
   "counts": {
-    "test_label_0": 267,
+    "test_label_0": 266,
     "test_label_1": 105,
     "train_label_0": 1239,
     "train_label_1": 486,

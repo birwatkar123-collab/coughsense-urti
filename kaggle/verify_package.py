@@ -32,7 +32,7 @@ for script in root.glob('*.py'):
 with zipfile.ZipFile(root / 'urti_kaggle_dataset.zip') as z:
     assert z.testzip() is None
     rows = list(csv.DictReader(io.StringIO(z.read('manifest.csv').decode())))
-    assert len(rows) == 2466
+    assert len(rows) == 2465
     assert len({r['uuid'] for r in rows}) == len(rows)
     groups = {}
     for row in rows:
@@ -41,4 +41,4 @@ with zipfile.ZipFile(root / 'urti_kaggle_dataset.zip') as z:
     assert all(len(splits) == 1 for splits in groups.values())
     for name in ['train.py', 'preprocess.py', 'predict.py', 'preprocessing.json', 'README.md']:
         assert z.read(name) == (root / name).read_bytes()
-print('PASS: label-policy cases, Python/notebook syntax, archive CRC, 2466 audio hashes, split isolation, bundled source match.')
+print('PASS: label-policy cases, Python/notebook syntax, archive CRC, 2465 audio hashes, split isolation, bundled source match.')

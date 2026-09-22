@@ -20,6 +20,8 @@ reference/
 *.zip
 kaggle/upload/*.zip
 kaggle/urti_kaggle_dataset.zip
+kaggle/last-run/
+kaggle/finished-run/
 shared-training-*.json
 shared-training-*.html
 shared-training-*.txt

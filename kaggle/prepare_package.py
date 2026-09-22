@@ -11,6 +11,10 @@ import zipfile
 from pathlib import Path
 
 KNOWN = {'upper_infection', 'lower_infection', 'healthy_cough', 'COVID-19', 'obstructive_disease'}
+PREPROCESSING_EXCLUDE_UUIDS = {
+    # Fails the packaged transform after trim with "Too little audible content."
+    'c9f8ed02-90a1-4a0f-9f2c-d3fd04f3ffbd',
+}
 
 
 def select_label(row):
@@ -100,6 +104,8 @@ def main():
                     raise ValueError('Multiple audio files for one recording ID')
                 audios[p.stem] = name
         for row in originals:
+            if row['uuid'] in PREPROCESSING_EXCLUDE_UUIDS:
+                continue
             label = select_label(row)
             if label is None:
                 continue
@@ -127,6 +133,7 @@ def main():
         counts = collections.Counter((r['split'], r['label']) for r in rows)
         assert all(counts[s, c] > 0 for s in ('train', 'validation', 'test') for c in (0, 1))
         summary = {'recordings': len(rows), 'unique_audio_hashes': len(grouped), 'seed': 75,
+                   'preprocessing_excluded_uuids': sorted(PREPROCESSING_EXCLUDE_UUIDS),
                    'counts': {f'{s}_label_{c}': n for (s, c), n in sorted(counts.items())},
                    'policy': 'Consistent available expert binary votes; exclude any poor/no_cough quality.',
                    'source': 'https://zenodo.org/records/7024894',
