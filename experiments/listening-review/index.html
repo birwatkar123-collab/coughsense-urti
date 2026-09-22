@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cough audio review</title>
+<style>body{font:17px system-ui;background:#f2f6f5;color:#183831;margin:0}main{max-width:760px;margin:40px auto;padding:28px;background:white;border-radius:18px}h1{font-size:32px}p{line-height:1.6}.muted{color:#526660}fieldset{border:1px solid #cad8d2;border-radius:10px;margin:20px 0;padding:16px}label{display:block;margin:12px 0}button{font:inherit;padding:12px 20px;border:0;border-radius:8px;background:#176958;color:white;cursor:pointer;margin:6px}button:disabled{opacity:.4}audio,textarea{width:100%}textarea{box-sizing:border-box;min-height:70px}progress{width:100%}#status{min-height:24px}</style>
+<main><p class="muted">LOCAL AUDIO REVIEW · NO DIAGNOSIS</p><h1>Listen for a usable cough</h1>
+<p>Listen to the whole clip before rating it. Judge only what you can hear. Diagnosis, model scores and selection group are hidden. “Uncertain” is a valid answer.</p>
+<p class="muted">Clear cough: at least one distinct cough audible. Mixed/noisy: a cough is audible but speech or noise interferes. No cough: only speech, breathing, silence or other sounds. Uncertain: cannot decide.</p>
+<progress id="progress" max="90" value="0"></progress><p id="counter"></p><h2 id="clip"></h2>
+<audio id="audio" controls preload="metadata"></audio>
+<fieldset><legend>What do you hear?</legend>
+<label><input type="radio" name="rating" value="clear_cough"> Clear cough</label>
+<label><input type="radio" name="rating" value="mixed_noisy_cough"> Cough with interfering speech / noise</label>
+<label><input type="radio" name="rating" value="no_cough"> No audible cough</label>
+<label><input type="radio" name="rating" value="uncertain"> Uncertain</label></fieldset>
+<label>Optional notes<textarea id="notes" maxlength="500" placeholder="Describe the sound, not a suspected illness."></textarea></label>
+<button id="prev">Previous</button><button id="next">Next</button><button id="export">Download reviews</button>
+<p id="status" role="status"></p><p class="muted">Answers are saved in this browser when available. Download your reviews before closing or switching browsers. This page does not upload audio or change training labels.</p></main>
+<script>
+const batch='urti-audio-review-20260921-v1';let index=0,answers={};
+const $=id=>document.getElementById(id);const radios=[...document.querySelectorAll('[name=rating]')];
+try{answers=JSON.parse(localStorage.getItem(batch)||'{}')}catch(e){$('status').textContent='Local saving unavailable; download your reviews regularly.'}
+function id(){return 'R'+String(index+1).padStart(3,'0')}
+function save(){const r=radios.find(x=>x.checked);if(r)answers[id()]={rating:r.value,notes:$('notes').value};try{localStorage.setItem(batch,JSON.stringify(answers))}catch(e){}update()}
+function update(){$('progress').value=Object.keys(answers).length;$('counter').textContent=Object.keys(answers).length+' of 90 reviewed · Clip '+(index+1)+' of 90'}
+function show(){$('audio').pause();$('audio').src='audio/'+id()+'.wav';$('clip').textContent='Recording '+id();radios.forEach(r=>r.checked=r.value===answers[id()]?.rating);$('notes').value=answers[id()]?.notes||'';$('prev').disabled=index===0;$('next').disabled=index===89;update()}
+radios.forEach(r=>r.addEventListener('change',save));$('notes').addEventListener('input',save);
+$('prev').onclick=()=>{save();index--;show()};$('next').onclick=()=>{save();index++;show()};
+$('audio').onerror=()=>{$('status').textContent='Audio could not load. Keep the audio folder beside this page.'};
+$('export').onclick=()=>{save();const data={batch,exported_at:new Date().toISOString(),reviews:answers};const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='urti-audio-reviews.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);$('status').textContent='Review file downloaded. Unreviewed clips remain unreviewed.'};show();
+</script></html>

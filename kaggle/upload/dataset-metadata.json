@@ -1,0 +1,10 @@
+{
+  "licenses": [
+    {
+      "name": "CC-BY-4.0"
+    }
+  ],
+  "description": "Filtered research subset of COUGHVID v3 by Lara Orlandic, Tomas Teijeiro and David Atienza (https://doi.org/10.5281/zenodo.7024894), licensed CC BY 4.0. Changes: retain 2466 recordings with consistent available binary expert labels and no poor/no_cough quality flag; package recording-level splits, original audio and multimodel calibrated training code. Labels are cough assessments, not confirmed clinical diagnoses. No demographic metadata included.",
+  "id": "birwatkar/coughvid-urti-research-subset",
+  "title": "COUGHVID URTI Research Subset"
+}

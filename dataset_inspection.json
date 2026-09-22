@@ -1,0 +1,27 @@
+{
+  "zip_path": "D:/ECGVisionAI/public_dataset_v3.zip",
+  "metadata_rows": 34434,
+  "unique_uuids": 34434,
+  "audio_files": 34434.0,
+  "duplicate_audio_ids": 0,
+  "rows_missing_audio": 0,
+  "no_expert_diagnosis": 31593,
+  "any_expert_diagnosis": 2841,
+  "single_expert_diagnosis": 2711,
+  "multiple_expert_diagnoses": 130,
+  "binary_disagreement": 98,
+  "exact_diagnosis_disagreement": 124,
+  "consistent_upper_infection": 729,
+  "consistent_non_upper_infection": 2014,
+  "majority_upper_infection": 739,
+  "majority_non_upper_infection": 2068,
+  "binary_tie": 34,
+  "labeled_any_poor_or_no_cough_quality": 304,
+  "diagnosis_votes": {
+    "COVID-19": 649,
+    "healthy_cough": 746,
+    "upper_infection": 883,
+    "obstructive_disease": 214,
+    "lower_infection": 732
+  }
+}

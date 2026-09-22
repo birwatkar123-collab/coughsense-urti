@@ -1,0 +1,1 @@
+# No shrinker rules needed for the research prototype (minify disabled).

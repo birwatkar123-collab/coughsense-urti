@@ -1,0 +1,24 @@
+Generated using the built-in image generation tool.
+
+Use case: infographic-diagram. Create a polished landscape illustrated schematic poster for a work-in-progress cough audio AI research project. Modern medical technology editorial design, warm off-white background, deep navy typography, teal and blue accents, subtle amber work-in-progress badges, ample whitespace, clean readable typography. High-quality friendly dimensional illustrations and tidy connecting arrows, presentation-ready, not a dense technical chart.
+
+Header exact text: "Could your cough offer a clue?"
+Subtitle exact text: "Exploring upper respiratory tract infection screening with AI"
+Prominent badge exact text: "WORK IN PROGRESS • RESEARCH PROTOTYPE"
+
+Main horizontal use-case journey with four numbered illustrated stations connected left to right:
+1. "Record a cough" — person at home holding a smartphone a short distance from their mouth, natural cough gesture, small audio waveform visible on phone.
+2. "Process the audio" — waveform transforming into a vibrant mel-spectrogram tile. Supporting text "Audio → spectrogram".
+3. "AI analysis" — compact neural-network illustration. Supporting text "Trained on expert-labeled coughs".
+4. "View a model estimate" — beautiful smartphone screen headed "Illustrative result", showing "URTI score" and "0.72", with smaller text "Uncalibrated model score". Do not show confirmed diagnosis or clinically validated probability.
+
+Lower narrow strip separate from app journey: "DEVELOPMENT ROADMAP" with three connected markers:
+"Dataset prepared" with check icon;
+"Model training" with amber progress icon;
+"App integration" with outlined future icon.
+Label the entire main journey "PROPOSED APP EXPERIENCE" so it does not imply a deployed product.
+
+Bottom readable footer exact text: "Experimental screening concept—not a diagnosis. A cough score cannot confirm a throat infection."
+Small legend "URTI = upper respiratory tract infection".
+
+Make the design visually striking and hopeful, professional research-project announcement with human use-case storytelling. No breath-holding instructions, no claims of guaranteed detection, no claimed accuracy, no prescription, no brand logos, no watermark. All text legible and sparse, clear arrows and precise flow.

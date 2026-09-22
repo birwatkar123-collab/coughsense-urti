@@ -1,0 +1,182 @@
+{
+  "experiment": "V4 balanced logistic regression with train-only selection and sigmoid calibration",
+  "train_size": 1724,
+  "validation_size": 369,
+  "selected_C": 0.001,
+  "selection": "5-fold stratified training CV ROC AUC",
+  "grid": [
+    {
+      "C": 0.001,
+      "mean_training_cv_auc": 0.5277526678297061,
+      "fold_auc": [
+        0.5639341536415032,
+        0.5532507482540738,
+        0.5342118390422348,
+        0.4966950342890193,
+        0.4906715639216996
+      ]
+    },
+    {
+      "C": 0.003,
+      "mean_training_cv_auc": 0.5224891609736745,
+      "fold_auc": [
+        0.5626870635184569,
+        0.5457266378450283,
+        0.531842367808447,
+        0.48706932165578776,
+        0.48512041404065276
+      ]
+    },
+    {
+      "C": 0.01,
+      "mean_training_cv_auc": 0.5158117082889107,
+      "fold_auc": [
+        0.5623129364815431,
+        0.5367891586298636,
+        0.5317592284669106,
+        0.4783111625216888,
+        0.46988605534454697
+      ]
+    },
+    {
+      "C": 0.03,
+      "mean_training_cv_auc": 0.5101309749283398,
+      "fold_auc": [
+        0.5595693382108413,
+        0.5288909211839041,
+        0.5278101097439308,
+        0.48211187308931663,
+        0.45227263241370674
+      ]
+    },
+    {
+      "C": 0.1,
+      "mean_training_cv_auc": 0.5063722152785641,
+      "fold_auc": [
+        0.5527519122048554,
+        0.523445294313269,
+        0.52203192550715,
+        0.4862843922994299,
+        0.4473475520681164
+      ]
+    },
+    {
+      "C": 0.3,
+      "mean_training_cv_auc": 0.5066906115480745,
+      "fold_auc": [
+        0.5451030927835052,
+        0.5261473229132025,
+        0.5196208846025939,
+        0.49264645129306783,
+        0.4499353061480029
+      ]
+    },
+    {
+      "C": 1.0,
+      "mean_training_cv_auc": 0.5054663248091614,
+      "fold_auc": [
+        0.5390339208513468,
+        0.5238609910209511,
+        0.5192467575656801,
+        0.49471205486243086,
+        0.4504778997453983
+      ]
+    }
+  ],
+  "raw": {
+    "roc_auc": 0.529354136429608,
+    "average_precision": 0.3034292728837381,
+    "sensitivity": 0.5576923076923077,
+    "specificity": 0.5018867924528302,
+    "balanced_accuracy": 0.5297895500725689,
+    "brier_score": 0.25249789990362154,
+    "log_loss": 0.698620494413727,
+    "confusion_matrix": [
+      [
+        133,
+        132
+      ],
+      [
+        46,
+        58
+      ]
+    ],
+    "threshold": 0.5
+  },
+  "calibrated": {
+    "roc_auc": 0.529354136429608,
+    "average_precision": 0.3034292728837381,
+    "sensitivity": 0.0,
+    "specificity": 1.0,
+    "balanced_accuracy": 0.5,
+    "brier_score": 0.20225388110325254,
+    "log_loss": 0.594334582488291,
+    "confusion_matrix": [
+      [
+        265,
+        0
+      ],
+      [
+        104,
+        0
+      ]
+    ],
+    "threshold": 0.5
+  },
+  "constant_baseline": {
+    "roc_auc": 0.5,
+    "average_precision": 0.28184281842818426,
+    "sensitivity": 0.0,
+    "specificity": 1.0,
+    "balanced_accuracy": 0.5,
+    "brier_score": 0.20240744769676583,
+    "log_loss": 0.5946853861953055,
+    "confusion_matrix": [
+      [
+        265,
+        0
+      ],
+      [
+        104,
+        0
+      ]
+    ],
+    "threshold": 0.5
+  },
+  "test_evaluated": false,
+  "sklearn_version": "1.9.1",
+  "seed": 75,
+  "limitation": "Validation has been used in earlier experiments; results remain exploratory. No participant IDs.",
+  "validation_95_percent_bootstrap": {
+    "calibrated_auc": [
+      0.4643650217706821,
+      0.5912282293178519
+    ],
+    "calibrated_minus_constant_brier": [
+      -0.0014292761377568178,
+      0.0012313604679706535
+    ],
+    "scope": "Conditional on fitted model; does not include model-selection uncertainty."
+  },
+  "calibration_bins": {
+    "mean_score": [
+      0.2619803159016699,
+      0.2756738800552181,
+      0.282472043547727,
+      0.28886786606818415,
+      0.30236382702084635
+    ],
+    "observed_fraction": [
+      0.24324324324324326,
+      0.28378378378378377,
+      0.2465753424657534,
+      0.32432432432432434,
+      0.3108108108108108
+    ]
+  },
+  "source_sha256": {
+    "manifest.csv": "adf2059a8c3edf624aeb7313e04a82e7fa65edf4bd448e042de4098e2897cb07",
+    "yamnet_embeddings.npy": "6f90824adb71fd838ef451ab18fa337d30215b6ab5b6bb46186482ec84264aff",
+    "run_config.json": "bb8c0b750829736ff3c1fc79b67d512a02514855321dbbe6e5e87a244e78aca8"
+  }
+}

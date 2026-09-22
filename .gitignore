@@ -1,0 +1,41 @@
+# Local environments and tool caches
+.venv*/
+.ml-cpu/
+.kaggle-cli/
+.audio-audit/
+__pycache__/
+*.py[cod]
+
+# Android / Gradle generated state
+app/local.properties
+app/.gradle/
+app/**/build/
+app/**/.cxx/
+*.apk
+*.aab
+
+# Large/raw datasets and archives
+data/raw/
+reference/
+*.zip
+kaggle/upload/*.zip
+kaggle/urti_kaggle_dataset.zip
+shared-training-*.json
+shared-training-*.html
+shared-training-*.txt
+model-artifacts/probe_fixed_*.tflite
+model-artifacts/*.tflite
+model-artifacts/gold/*.bin
+app/src/
+
+# Generated experiment outputs that can be rebuilt
+experiments/**/outputs/
+experiments/**/*.joblib
+experiments/**/*.npy
+experiments/listening-review/audio/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,163 @@
+[{"stream_name":"stderr","time":4.971393134,"data":"/usr/local/lib/python3.12/dist-packages/nbformat/__init__.py:96: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":4.971462783,"data":"  validate(nb)\n"}
+,{"stream_name":"stderr","time":5.646921103,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":5.64695001,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":5.6469564519999995,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":5.646963237,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.1803557940000005,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.18038676,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.180390704,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.180393454,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":21.595955592,"data":"/usr/local/lib/python3.12/dist-packages/tensorflow_hub/__init__.py:61: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools\u003c81.\n"}
+,{"stream_name":"stderr","time":21.595989287,"data":"  from pkg_resources import parse_version\n"}
+,{"stream_name":"stderr","time":21.595995447,"data":"\n"}
+,{"stream_name":"stderr","time":21.596002899,"data":"/usr/local/lib/python3.12/dist-packages/tensorflow_hub/__init__.py:61: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools\u003c81.\n"}
+,{"stream_name":"stderr","time":21.596008514,"data":"  from pkg_resources import parse_version\n"}
+,{"stream_name":"stdout","time":24.398545558,"data":"TensorFlow: 2.20.0\n"}
+,{"stream_name":"stdout","time":24.39860563,"data":"GPUs: [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:1', device_type='GPU')]\n"}
+,{"stream_name":"stdout","time":24.398616901,"data":"Original dataset: 2466\n"}
+,{"stream_name":"stdout","time":24.398620192,"data":"Excluded: c9f8ed02-90a1-4a0f-9f2c-d3fd04f3ffbd\n"}
+,{"stream_name":"stdout","time":24.398623278,"data":"Final dataset: 2465\n"}
+,{"stream_name":"stdout","time":24.398626275,"data":"\n"}
+,{"stream_name":"stdout","time":24.39862918,"data":"Split/label counts:\n"}
+,{"stream_name":"stdout","time":24.398632066,"data":"label          0    1\n"}
+,{"stream_name":"stdout","time":24.398635109,"data":"split                \n"}
+,{"stream_name":"stdout","time":24.398637953,"data":"test         267  105\n"}
+,{"stream_name":"stdout","time":24.398640811,"data":"train       1238  486\n"}
+,{"stream_name":"stdout","time":24.398643721,"data":"validation   265  104\n"}
+,{"stream_name":"stdout","time":24.398646555,"data":"\n"}
+,{"stream_name":"stdout","time":24.398649341,"data":"Loading YAMNet:\n"}
+,{"stream_name":"stdout","time":24.398660847,"data":"https://tfhub.dev/google/yamnet/1\n"}
+,{"stream_name":"stderr","time":26.915535631,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":26.915596045,"data":"I0000 00:00:1789993352.505966      23 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 13756 MB memory:  -\u003e device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5\n"}
+,{"stream_name":"stderr","time":26.918976246,"data":"I0000 00:00:1789993352.511917      23 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 13756 MB memory:  -\u003e device: 1, name: Tesla T4, pci bus id: 0000:00:05.0, compute capability: 7.5\n"}
+,{"stream_name":"stderr","time":27.110205817,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":27.110231584,"data":"I0000 00:00:1789993352.505966      23 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 13756 MB memory:  -\u003e device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5\n"}
+,{"stream_name":"stderr","time":27.110238035,"data":"I0000 00:00:1789993352.511917      23 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 13756 MB memory:  -\u003e device: 1, name: Tesla T4, pci bus id: 0000:00:05.0, compute capability: 7.5\n"}
+,{"stream_name":"stderr","time":27.110244014,"data":"\n"}
+,{"stream_name":"stderr","time":27.110248777,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":27.110254008,"data":"I0000 00:00:1789993352.505966      23 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 13756 MB memory:  -\u003e device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5\n"}
+,{"stream_name":"stderr","time":27.110259791,"data":"I0000 00:00:1789993352.511917      23 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 13756 MB memory:  -\u003e device: 1, name: Tesla T4, pci bus id: 0000:00:05.0, compute capability: 7.5\n"}
+,{"stream_name":"stdout","time":30.034107117,"data":"YAMNet loaded.\n"}
+,{"stream_name":"stdout","time":62.965675659,"data":"Embedded 100/2465 recordings\n"}
+,{"stream_name":"stdout","time":77.55187421,"data":"Embedded 200/2465 recordings\n"}
+,{"stream_name":"stdout","time":93.395354946,"data":"Embedded 300/2465 recordings\n"}
+,{"stream_name":"stdout","time":108.42484495,"data":"Embedded 400/2465 recordings\n"}
+,{"stream_name":"stdout","time":122.996070148,"data":"Embedded 500/2465 recordings\n"}
+,{"stream_name":"stdout","time":137.818982722,"data":"Embedded 600/2465 recordings\n"}
+,{"stream_name":"stdout","time":152.772245306,"data":"Embedded 700/2465 recordings\n"}
+,{"stream_name":"stdout","time":167.931271155,"data":"Embedded 800/2465 recordings\n"}
+,{"stream_name":"stdout","time":183.034678436,"data":"Embedded 900/2465 recordings\n"}
+,{"stream_name":"stdout","time":197.820102008,"data":"Embedded 1000/2465 recordings\n"}
+,{"stream_name":"stdout","time":212.670067166,"data":"Embedded 1100/2465 recordings\n"}
+,{"stream_name":"stdout","time":227.727353494,"data":"Embedded 1200/2465 recordings\n"}
+,{"stream_name":"stdout","time":243.003290768,"data":"Embedded 1300/2465 recordings\n"}
+,{"stream_name":"stdout","time":258.031657648,"data":"Embedded 1400/2465 recordings\n"}
+,{"stream_name":"stdout","time":273.002266061,"data":"Embedded 1500/2465 recordings\n"}
+,{"stream_name":"stdout","time":288.087478038,"data":"Embedded 1600/2465 recordings\n"}
+,{"stream_name":"stdout","time":302.906701585,"data":"Embedded 1700/2465 recordings\n"}
+,{"stream_name":"stdout","time":317.379683265,"data":"Embedded 1800/2465 recordings\n"}
+,{"stream_name":"stdout","time":332.127410097,"data":"Embedded 1900/2465 recordings\n"}
+,{"stream_name":"stdout","time":346.52803791,"data":"Embedded 2000/2465 recordings\n"}
+,{"stream_name":"stdout","time":361.380635413,"data":"Embedded 2100/2465 recordings\n"}
+,{"stream_name":"stdout","time":376.140423093,"data":"Embedded 2200/2465 recordings\n"}
+,{"stream_name":"stdout","time":391.266621584,"data":"Embedded 2300/2465 recordings\n"}
+,{"stream_name":"stdout","time":406.175449373,"data":"Embedded 2400/2465 recordings\n"}
+,{"stream_name":"stdout","time":415.910411242,"data":"\n"}
+,{"stream_name":"stdout","time":415.910472013,"data":"Embedding matrix: (2465, 1024)\n"}
+,{"stream_name":"stdout","time":415.910479118,"data":"YAMNet frames per recording: min = 1 mean = 9.150507099391481 max = 20\n"}
+,{"stream_name":"stdout","time":415.910484258,"data":"\n"}
+,{"stream_name":"stdout","time":415.91048884,"data":"Training recordings: 1724\n"}
+,{"stream_name":"stdout","time":415.910494069,"data":"Validation recordings: 369\n"}
+,{"stream_name":"stdout","time":415.910498687,"data":"Test recordings: 372\n"}
+,{"stream_name":"stdout","time":415.910506501,"data":"\n"}
+,{"stream_name":"stdout","time":415.910510267,"data":"Class weights: {0: 0.6962843295638126, 1: 1.7736625514403292}\n"}
+,{"stream_name":"stdout","time":416.653731826,"data":"Epoch 1/50\n"}
+,{"stream_name":"stderr","time":420.34728812,"data":"I0000 00:00:1789993745.954387      72 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.\n"}
+,{"stream_name":"stderr","time":420.550233234,"data":"I0000 00:00:1789993745.954387      72 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.\n"}
+,{"stream_name":"stderr","time":420.550271774,"data":"\n"}
+,{"stream_name":"stderr","time":420.550275959,"data":"I0000 00:00:1789993745.954387      72 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.\n"}
+,{"stream_name":"stdout","time":425.495687004,"data":"54/54 - 9s - 164ms/step - auc: 0.4995 - loss: 0.7533 - pr_auc: 0.2827 - val_auc: 0.5274 - val_loss: 0.6593 - val_pr_auc: 0.3173 - learning_rate: 0.0010\n"}
+,{"stream_name":"stdout","time":425.500122052,"data":"Epoch 2/50\n"}
+,{"stream_name":"stdout","time":425.822051542,"data":"54/54 - 0s - 6ms/step - auc: 0.5346 - loss: 0.7042 - pr_auc: 0.3153 - val_auc: 0.5413 - val_loss: 0.6784 - val_pr_auc: 0.3280 - learning_rate: 0.0010\n"}
+,{"stream_name":"stdout","time":425.82616822,"data":"Epoch 3/50\n"}
+,{"stream_name":"stdout","time":426.108113985,"data":"54/54 - 0s - 5ms/step - auc: 0.5208 - loss: 0.7131 - pr_auc: 0.2875 - val_auc: 0.5263 - val_loss: 0.6597 - val_pr_auc: 0.3022 - learning_rate: 0.0010\n"}
+,{"stream_name":"stdout","time":426.112909201,"data":"Epoch 4/50\n"}
+,{"stream_name":"stdout","time":426.393736703,"data":"54/54 - 0s - 5ms/step - auc: 0.5400 - loss: 0.6982 - pr_auc: 0.3165 - val_auc: 0.4726 - val_loss: 0.6608 - val_pr_auc: 0.2697 - learning_rate: 0.0010\n"}
+,{"stream_name":"stdout","time":426.398219549,"data":"Epoch 5/50\n"}
+,{"stream_name":"stdout","time":426.675443008,"data":"\n"}
+,{"stream_name":"stdout","time":426.675481603,"data":"Epoch 5: ReduceLROnPlateau reducing learning rate to 0.0005000000237487257.\n"}
+,{"stream_name":"stdout","time":426.676620425,"data":"54/54 - 0s - 5ms/step - auc: 0.5284 - loss: 0.6984 - pr_auc: 0.3040 - val_auc: 0.5201 - val_loss: 0.6697 - val_pr_auc: 0.3008 - learning_rate: 0.0010\n"}
+,{"stream_name":"stdout","time":426.681420761,"data":"Epoch 6/50\n"}
+,{"stream_name":"stdout","time":426.959649482,"data":"54/54 - 0s - 5ms/step - auc: 0.5646 - loss: 0.6910 - pr_auc: 0.3153 - val_auc: 0.5116 - val_loss: 0.6864 - val_pr_auc: 0.2881 - learning_rate: 5.0000e-04\n"}
+,{"stream_name":"stdout","time":426.964162163,"data":"Epoch 7/50\n"}
+,{"stream_name":"stdout","time":427.248132821,"data":"54/54 - 0s - 5ms/step - auc: 0.5640 - loss: 0.6883 - pr_auc: 0.3212 - val_auc: 0.4698 - val_loss: 0.6897 - val_pr_auc: 0.2727 - learning_rate: 5.0000e-04\n"}
+,{"stream_name":"stdout","time":427.252298657,"data":"Epoch 8/50\n"}
+,{"stream_name":"stdout","time":427.53405962,"data":"\n"}
+,{"stream_name":"stdout","time":427.53410347,"data":"Epoch 8: ReduceLROnPlateau reducing learning rate to 0.0002500000118743628.\n"}
+,{"stream_name":"stdout","time":427.5349315,"data":"54/54 - 0s - 5ms/step - auc: 0.5534 - loss: 0.6908 - pr_auc: 0.3179 - val_auc: 0.4864 - val_loss: 0.6941 - val_pr_auc: 0.2800 - learning_rate: 5.0000e-04\n"}
+,{"stream_name":"stdout","time":427.539626623,"data":"Epoch 9/50\n"}
+,{"stream_name":"stdout","time":427.818016005,"data":"54/54 - 0s - 5ms/step - auc: 0.6062 - loss: 0.6769 - pr_auc: 0.3660 - val_auc: 0.5050 - val_loss: 0.6931 - val_pr_auc: 0.2893 - learning_rate: 2.5000e-04\n"}
+,{"stream_name":"stdout","time":427.822442769,"data":"Epoch 10/50\n"}
+,{"stream_name":"stdout","time":428.097121991,"data":"54/54 - 0s - 5ms/step - auc: 0.5748 - loss: 0.6840 - pr_auc: 0.3381 - val_auc: 0.5065 - val_loss: 0.7021 - val_pr_auc: 0.2884 - learning_rate: 2.5000e-04\n"}
+,{"stream_name":"stdout","time":429.026636007,"data":"\n"}
+,{"stream_name":"stdout","time":429.026671248,"data":"======================================\n"}
+,{"stream_name":"stdout","time":429.026677331,"data":"YAMNET EXPERIMENT COMPLETE\n"}
+,{"stream_name":"stdout","time":429.026681296,"data":"======================================\n"}
+,{"stream_name":"stdout","time":429.02668492,"data":"{\n"}
+,{"stream_name":"stdout","time":429.026688252,"data":"  \"model\": \"YAMNet mean embedding + dense classifier\",\n"}
+,{"stream_name":"stdout","time":429.026691926,"data":"  \"yamnet_url\": \"https://tfhub.dev/google/yamnet/1\",\n"}
+,{"stream_name":"stdout","time":429.026695408,"data":"  \"roc_auc\": 0.5814517567326556,\n"}
+,{"stream_name":"stdout","time":429.02669881,"data":"  \"average_precision\": 0.36120531900290276,\n"}
+,{"stream_name":"stdout","time":429.026702473,"data":"  \"accuracy\": 0.6397849462365591,\n"}
+,{"stream_name":"stdout","time":429.026705952,"data":"  \"balanced_accuracy\": 0.5497057249866238,\n"}
+,{"stream_name":"stdout","time":429.026709565,"data":"  \"sensitivity\": 0.34285714285714286,\n"}
+,{"stream_name":"stdout","time":429.026713425,"data":"  \"specificity\": 0.7565543071161048,\n"}
+,{"stream_name":"stdout","time":429.026717469,"data":"  \"precision\": 0.3564356435643564,\n"}
+,{"stream_name":"stdout","time":429.026720805,"data":"  \"f1\": 0.34951456310679613,\n"}
+,{"stream_name":"stdout","time":429.026724334,"data":"  \"brier_score\": 0.23933809955191124,\n"}
+,{"stream_name":"stdout","time":429.026727765,"data":"  \"log_loss\": 0.6717136960559619,\n"}
+,{"stream_name":"stdout","time":429.026731374,"data":"  \"threshold\": 0.5,\n"}
+,{"stream_name":"stdout","time":429.0267355,"data":"  \"confusion_matrix\": [\n"}
+,{"stream_name":"stdout","time":429.026739001,"data":"    [\n"}
+,{"stream_name":"stdout","time":429.026742345,"data":"      202,\n"}
+,{"stream_name":"stdout","time":429.026745765,"data":"      65\n"}
+,{"stream_name":"stdout","time":429.026749382,"data":"    ],\n"}
+,{"stream_name":"stdout","time":429.026764453,"data":"    [\n"}
+,{"stream_name":"stdout","time":429.026768218,"data":"      69,\n"}
+,{"stream_name":"stdout","time":429.026771301,"data":"      36\n"}
+,{"stream_name":"stdout","time":429.026774478,"data":"    ]\n"}
+,{"stream_name":"stdout","time":429.026777623,"data":"  ],\n"}
+,{"stream_name":"stdout","time":429.026780782,"data":"  \"test_size\": 372,\n"}
+,{"stream_name":"stdout","time":429.026783907,"data":"  \"test_positive_cases\": 105,\n"}
+,{"stream_name":"stdout","time":429.02678846,"data":"  \"test_negative_cases\": 267,\n"}
+,{"stream_name":"stdout","time":429.02679186,"data":"  \"mean_positive_score\": 0.4911963939666748,\n"}
+,{"stream_name":"stdout","time":429.026795427,"data":"  \"mean_negative_score\": 0.47796374559402466\n"}
+,{"stream_name":"stdout","time":429.026798988,"data":"}\n"}
+,{"stream_name":"stdout","time":429.02680299,"data":"\n"}
+,{"stream_name":"stdout","time":429.026806796,"data":"Best validation epoch: 2\n"}
+,{"stream_name":"stdout","time":429.026824556,"data":"Best validation AUC: 0.5412917137145996\n"}
+,{"stream_name":"stdout","time":429.02682853,"data":"\n"}
+,{"stream_name":"stdout","time":429.026832037,"data":"Positive mean score: 0.4911963939666748\n"}
+,{"stream_name":"stdout","time":429.026835472,"data":"Negative mean score: 0.47796374559402466\n"}
+,{"stream_name":"stdout","time":429.026838913,"data":"\n"}
+,{"stream_name":"stdout","time":429.026842791,"data":"Saved outputs:\n"}
+,{"stream_name":"stdout","time":429.026846097,"data":"embedding_frame_counts.csv 97289\n"}
+,{"stream_name":"stdout","time":429.02684944,"data":"evaluation.png 88899\n"}
+,{"stream_name":"stdout","time":429.026852703,"data":"excluded_samples.json 168\n"}
+,{"stream_name":"stdout","time":429.026855975,"data":"history.json 1852\n"}
+,{"stream_name":"stdout","time":429.026859552,"data":"manifest.csv 390907\n"}
+,{"stream_name":"stdout","time":429.026863671,"data":"metrics.json 759\n"}
+,{"stream_name":"stdout","time":429.026867043,"data":"run_config.json 622\n"}
+,{"stream_name":"stdout","time":429.026870405,"data":"test_predictions.csv 19225\n"}
+,{"stream_name":"stdout","time":429.026874178,"data":"yamnet_classifier.keras 3377403\n"}
+,{"stream_name":"stdout","time":429.026877819,"data":"yamnet_embeddings.npy 10096768\n"}
+,{"stream_name":"stderr","time":434.006263504,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":434.00632033,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":434.149040345,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":434.149084148,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":434.718551476,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":435.011006666,"data":"[NbConvertApp] Writing 38050 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":437.278712232,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":438.097747166,"data":"[NbConvertApp] Writing 355484 bytes to __results__.html\n"}
+]

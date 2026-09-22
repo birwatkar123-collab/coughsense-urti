@@ -1,0 +1,163 @@
+[
+  {
+    "id": "synth_tone_bursts",
+    "input_len": 128000,
+    "out_len": 10240,
+    "start": 11264,
+    "end": 21504
+  },
+  {
+    "id": "synth_noise_body",
+    "input_len": 128000,
+    "out_len": 118272,
+    "start": 4096,
+    "end": 122368
+  },
+  {
+    "id": "synth_faint",
+    "input_len": 128000,
+    "out_len": 15360,
+    "start": 3072,
+    "end": 18432
+  },
+  {
+    "id": "synth_silent",
+    "input_len": 128000,
+    "out_len": 128000,
+    "start": 0,
+    "end": 128000
+  },
+  {
+    "id": "synth_short",
+    "input_len": 1000,
+    "out_len": 1000,
+    "start": 0,
+    "end": 1000
+  },
+  {
+    "id": "synth_exact_020",
+    "input_len": 3200,
+    "out_len": 3200,
+    "start": 0,
+    "end": 3200
+  },
+  {
+    "id": "synth_tone20s",
+    "input_len": 320000,
+    "out_len": 312832,
+    "start": 7168,
+    "end": 320000
+  },
+  {
+    "id": "dev_77f4b676-9d1f-49d4-b694-49f2edb225bd",
+    "input_len": 156480,
+    "out_len": 24576,
+    "start": 24064,
+    "end": 48640
+  },
+  {
+    "id": "dev_1443c84e-8b53-4bcf-910f-c55cf1fc9d30",
+    "input_len": 67200,
+    "out_len": 59392,
+    "start": 5632,
+    "end": 65024
+  },
+  {
+    "id": "dev_5d7f356e-f0bf-4cee-896d-9341e81ddaaf",
+    "input_len": 156480,
+    "out_len": 151040,
+    "start": 3584,
+    "end": 154624
+  },
+  {
+    "id": "dev_29b6feee-6562-48cc-844e-dbfa815a5723",
+    "input_len": 158400,
+    "out_len": 155328,
+    "start": 3072,
+    "end": 158400
+  },
+  {
+    "id": "dev_198f3500-da31-4e16-aa93-05e56a62eea2",
+    "input_len": 157440,
+    "out_len": 92672,
+    "start": 27648,
+    "end": 120320
+  },
+  {
+    "id": "dev_4d6cdc78-b5f1-4568-bea9-ae1a49c34ee7",
+    "input_len": 120000,
+    "out_len": 52736,
+    "start": 16896,
+    "end": 69632
+  },
+  {
+    "id": "dev_bce328d8-acfe-4cc9-bc60-e7934f3e6e5f",
+    "input_len": 158400,
+    "out_len": 29696,
+    "start": 28160,
+    "end": 57856
+  },
+  {
+    "id": "dev_adddfa9b-c016-4e58-8275-308501fc13d9",
+    "input_len": 158400,
+    "out_len": 13312,
+    "start": 19456,
+    "end": 32768
+  },
+  {
+    "id": "dev_5c4b21f1-e8d1-4133-9f78-76b3ef3c5f18",
+    "input_len": 159360,
+    "out_len": 50176,
+    "start": 50688,
+    "end": 100864
+  },
+  {
+    "id": "dev_a3529398-f357-4c11-bec3-c2e30088df2e",
+    "input_len": 158400,
+    "out_len": 130752,
+    "start": 27648,
+    "end": 158400
+  },
+  {
+    "id": "dev_a1e6d70d-dcbc-4e53-9422-503f0d4d8c04",
+    "input_len": 159360,
+    "out_len": 132096,
+    "start": 24064,
+    "end": 156160
+  },
+  {
+    "id": "dev_26b079a2-0954-4ca4-a494-1ef64e7d93f9",
+    "input_len": 159360,
+    "out_len": 7680,
+    "start": 28672,
+    "end": 36352
+  },
+  {
+    "id": "dev_b2c1d6e5-37e4-45c9-95bd-109c519ebe2f",
+    "input_len": 153600,
+    "out_len": 99840,
+    "start": 37376,
+    "end": 137216
+  },
+  {
+    "id": "dev_8f71aa36-4f94-4726-9def-b98b63f03a27",
+    "input_len": 154560,
+    "out_len": 48128,
+    "start": 66560,
+    "end": 114688
+  },
+  {
+    "id": "dev_25d5e8bc-0203-4909-aebb-00df700417b9",
+    "input_len": 156480,
+    "out_len": 16896,
+    "start": 41984,
+    "end": 58880
+  },
+  {
+    "id": "dev_c9d68f80-c9ee-4cb3-885b-f4f46fa1c8bd",
+    "input_len": 111360,
+    "out_len": 64000,
+    "start": 37376,
+    "end": 101376
+  }
+]

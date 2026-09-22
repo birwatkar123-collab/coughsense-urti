@@ -1,0 +1,15 @@
+{
+  "kernel_type": "notebook",
+  "is_private": true,
+  "competition_sources": [],
+  "title": "URTI Cough Multimodel Calibrated Training",
+  "id": "birwatkar/urti-cough-multimodel-calibrated",
+  "code_file": "URTI_Training.ipynb",
+  "kernel_sources": [],
+  "enable_gpu": true,
+  "dataset_sources": [
+    "birwatkar/coughvid-urti-research-subset"
+  ],
+  "enable_internet": true,
+  "language": "python"
+}

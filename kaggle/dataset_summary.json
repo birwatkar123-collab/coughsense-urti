@@ -1,0 +1,16 @@
+{
+  "recordings": 2466,
+  "unique_audio_hashes": 2466,
+  "seed": 75,
+  "counts": {
+    "test_label_0": 267,
+    "test_label_1": 105,
+    "train_label_0": 1239,
+    "train_label_1": 486,
+    "validation_label_0": 265,
+    "validation_label_1": 104
+  },
+  "policy": "Consistent available expert binary votes; exclude any poor/no_cough quality.",
+  "source": "https://zenodo.org/records/7024894",
+  "participant_grouping": "Unavailable; groups are recording UUIDs and identical audio bytes."
+}

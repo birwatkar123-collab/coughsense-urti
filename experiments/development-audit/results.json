@@ -1,0 +1,98 @@
+{
+  "development_recordings": 2093,
+  "test_inspected": false,
+  "by_class": {
+    "0": {
+      "recordings": 1503,
+      "expert_count_distribution": {
+        "1": 1488,
+        "4": 15
+      },
+      "diagnosis_votes": {
+        "healthy_cough": 465,
+        "lower_infection": 487,
+        "obstructive_disease": 152,
+        "COVID-19": 444
+      },
+      "quality_votes": {
+        "good": 888,
+        "ok": 660
+      },
+      "annotation_slots": {
+        "3": 320,
+        "2": 421,
+        "4": 349,
+        "1": 458
+      },
+      "cough_detected_summary": {
+        "n": 1503,
+        "median": 0.967,
+        "min": 0.0316,
+        "max": 0.9994
+      },
+      "cough_detected_below_0_8": 188,
+      "cough_detected_below_0_5": 51
+    },
+    "1": {
+      "recordings": 590,
+      "expert_count_distribution": {
+        "1": 590
+      },
+      "diagnosis_votes": {
+        "upper_infection": 590
+      },
+      "quality_votes": {
+        "good": 487,
+        "ok": 103
+      },
+      "annotation_slots": {
+        "3": 253,
+        "4": 215,
+        "2": 102,
+        "1": 20
+      },
+      "cough_detected_summary": {
+        "n": 590,
+        "median": 0.9736,
+        "min": 0.0678,
+        "max": 0.9987
+      },
+      "cough_detected_below_0_8": 56,
+      "cough_detected_below_0_5": 19
+    }
+  },
+  "annotation_slot_counts": {
+    "3": {
+      "0": 320,
+      "1": 253
+    },
+    "2": {
+      "0": 421,
+      "1": 102
+    },
+    "4": {
+      "0": 349,
+      "1": 215
+    },
+    "1": {
+      "0": 458,
+      "1": 20
+    }
+  },
+  "audio_sample_size": 48,
+  "audio_decoded": 48,
+  "audio_duration": {
+    "n": 48,
+    "median": 9.78,
+    "min": 2.64,
+    "max": 10.0106875
+  },
+  "audio_with_over_1_percent_clipped_samples": 0,
+  "audio_active_span_below_0_2_seconds": 0,
+  "limitations": [
+    "Energy checks do not distinguish cough, speech or background noise.",
+    "Random 48-file sample does not certify the full cohort.",
+    "Annotation slot indices are not independently verified physician identifiers.",
+    "cough_detected is an existing model score, not manual verification."
+  ]
+}
